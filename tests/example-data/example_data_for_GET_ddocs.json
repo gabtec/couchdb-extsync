@@ -1,0 +1,4 @@
+{"total_rows":2,"offset":0,"rows":[
+  {"id":"_design/testeOne","key":"_design/testeOne","value":{"rev":"1-bc0e31d188020d00439b103b25034459"},"doc":{"_id":"_design/testeOne","_rev":"1-bc0e31d188020d00439b103b25034459","views":{"by_zone":{"map":"function (doc) {\n  if(doc && doc.doc_type && doc.doc_type === \"testeOne\") {\n    emit([doc.zona, doc.distrito, doc.concelho], 1 )\n  }\n}"}},"language":"javascript"}},
+  {"id":"_design/testeTwo","key":"_design/testeTwo","value":{"rev":"4-642e25807f65c2a2bbe1f4fe499aa315"},"doc":{"_id":"_design/testeTwo","_rev":"4-642e25807f65c2a2bbe1f4fe499aa315","views":{"by_service":{"map":"function (doc) {\n  if(doc && doc.doc_type && doc.doc_type === \"testeTwo\"){\n    emit(doc.workPlace, doc.nome_prof);\n  }\n}"},"by_test":{"map":"function (doc) {\n  emit(doc._id, 1);\n}"}},"language":"javascript"}}
+  ]}

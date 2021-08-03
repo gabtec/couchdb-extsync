@@ -2,8 +2,9 @@ const axios = require("axios");
 const expect = require("chai").expect;
 
 const createIfNotExistent = require("../lib/tools/createIfNotExistent.js");
+const getConnectionString = require("../lib/tools/getConnectionString");
 
-const url = "http://admin:admin@localhost:5984";
+const url = getConnectionString();
 
 describe("CouchDB Utils - Tools: createIfNotExistent() Test Suite", () => {
   // C1
@@ -21,10 +22,7 @@ describe("CouchDB Utils - Tools: createIfNotExistent() Test Suite", () => {
     });
 
     it("should output ok: db exists", async () => {
-      const result = await createIfNotExistent(
-        "http://admin:admin@localhost:5984",
-        db
-      );
+      const result = await createIfNotExistent(url, db);
 
       expect(result).to.be.eql({ ok: `DB "${db}" exists.`, error: null });
     });
@@ -39,10 +37,7 @@ describe("CouchDB Utils - Tools: createIfNotExistent() Test Suite", () => {
     });
 
     it("should output ok: db created", async () => {
-      const result = await createIfNotExistent(
-        "http://admin:admin@localhost:5984",
-        db
-      );
+      const result = await createIfNotExistent(url, db);
 
       expect(result).to.be.eql({ ok: `DB "${db}" created.`, error: null });
     });
@@ -55,10 +50,7 @@ describe("CouchDB Utils - Tools: createIfNotExistent() Test Suite", () => {
     it("should output ok:false, error: error", async () => {
       try {
         // force an error with NO dbname
-        const result = await createIfNotExistent(
-          "http://admin:admin@localhost:5984",
-          db
-        );
+        const result = await createIfNotExistent(url, db);
       } catch (error) {
         expect(error.ok).to.be.eql(false);
         expect(error.error.message).to.be.eql("Invalid params");

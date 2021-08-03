@@ -31,7 +31,7 @@ $ npm unlink cdbu
 
 ## Dependecies
 
-. node js (tested with v14.17.3 LTS)
+. node js (developed with v14.17.3 LTS)
 . axios
 . dotenv
 
@@ -64,7 +64,7 @@ Options:
 -d | database - The database name (required with -e and -s options)
 -r | rename   - (optional) Will use a diferent database name on the remote server
 -C | config   - (optional, but...) Provides a js object OR a path to config json file (e.g. .cdburc.json) (MUST BE JSON)
--E | env      - (optional, but...) Provides a js object OR a path to a env file (e.g. .env)
+-E | env      - (optional, but...) Provides a js object OR a path to a env file (e.g. .env). Also reads a connection string from COUCH env (e.g. COUCH=http://admin:password@127.0.0.1:5984)
 ```
 
 ## Defaul Config values

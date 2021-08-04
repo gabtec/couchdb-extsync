@@ -1,0 +1,1 @@
+{"_id":"_design/testeTwo","_rev":"4-642e25807f65c2a2bbe1f4fe499aa315","views":{"by_service":{"map":"function (doc) {\n  if(doc && doc.doc_type && doc.doc_type === \"testeTwo\"){\n    emit(doc.workPlace, doc.nome_prof);\n  }\n}"},"by_test":{"map":"function (doc) {\n  emit(doc._id, 1);\n}"}},"language":"javascript"}

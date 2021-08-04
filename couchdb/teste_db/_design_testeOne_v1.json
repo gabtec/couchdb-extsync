@@ -1,0 +1,1 @@
+{"_id":"_design/testeOne","_rev":"1-bc0e31d188020d00439b103b25034459","views":{"by_zone":{"map":"function (doc) {\n  if(doc && doc.doc_type && doc.doc_type === \"testeOne\") {\n    emit([doc.zona, doc.distrito, doc.concelho], 1 )\n  }\n}"}},"language":"javascript"}

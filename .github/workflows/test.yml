@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    name: Test with ${{ matrix.couchdb }}
+    name: Test with ${{ matrix.couchdb-version }}
     runs-on: ubuntu-latest
 
     strategy:

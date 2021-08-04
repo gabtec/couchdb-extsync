@@ -3,6 +3,8 @@ const exec = require("child_process").exec;
 
 const cmd = "node lib/cli.js";
 
+console.log(process.cwd());
+
 describe("CouchDB Utils - CLI Test Suite", () => {
   it("should output help if no args passed", (done) => {
     exec(cmd, (err, stdout) => {

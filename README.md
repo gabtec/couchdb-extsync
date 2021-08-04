@@ -5,7 +5,7 @@
 _I renamed to "couchdb-extsync" for npm publish because couchdb-utils was taken and I do not have npm enterprise account_  
 _This is why the github project and folder is named couchdb-utils_
 
-## What is couchdb-utils
+## What is couchdb-extsync
 
 This is a cli tool to extract design docs from a development CouchDB database to a local dev folder, and the another cli tool to sync thos design docs to a second CouchDB server.
 

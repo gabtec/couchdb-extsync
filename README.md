@@ -1,5 +1,7 @@
 # @gabtec/couchdb-utils
 
+[![Tests CI](https://github.com/gabtec/couchdb-utils/actions/workflows/test.yml/badge.svg)](https://github.com/gabtec/couchdb-utils/actions/workflows/test.yml)
+
 ## What is couchdb-utils
 
 This is a cli tool to extract design docs from a development CouchDB database to a local dev folder, and the another cli tool to sync thos design docs to a second CouchDB server.

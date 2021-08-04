@@ -13,7 +13,7 @@ This is a cli tool to extract design docs from a development CouchDB database to
 
 ### global
 
-```js
+```
 $ npm i -g couchdb-extsync
 // this will puth "cdbu" command in your /usr/bin
 
@@ -23,7 +23,7 @@ $ cdbu -h
 
 ### local
 
-```js
+```
 $ npm i -D couchdb-extsync
 // then create a package.json script entry
 // e.g. "cdbu": "cdbu"
@@ -42,7 +42,7 @@ $ cdbu -- -h
 
 ## CLI usage
 
-```js
+```
 $ cdbu [MODE] [options]
 
 // extract ddocs
@@ -126,10 +126,10 @@ COUCHDB_PORT = "5984";
 
 If you try to run tests locally, make sure you have a couchdb instance running first.
 
-# AUTHOR
+## AUTHOR
 
 Gabriel Martins _aka Gabtec_
 
-# LICENSE
+## LICENSE
 
 MIT

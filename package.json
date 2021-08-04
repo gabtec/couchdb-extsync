@@ -28,5 +28,10 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^10.0.0"
+  },
+  "homepage": "https://github.com/gabtec/couchdb-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabtec/couchdb-utils.git"
   }
 }

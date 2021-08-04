@@ -1,11 +1,14 @@
 const expect = require("chai").expect;
 const axios = require("axios");
-const example = require("./example-data/example_data_for_GET_ddocs.json");
 const exec = require("child_process").exec;
+
+const example = require("./example-data/example_data_for_GET_ddocs.json");
 const clearEnvs = require("./helpers/clearEnvs.js");
+const getConnectionString = require("../lib/tools/getConnectionString");
 const runSync = require("../lib/tools/runSync");
 
 const cmd = "node lib/cli.js";
+const url = getConnectionString();
 
 // async function loadData(dbName) {
 //   const res = await axios.get(
@@ -33,7 +36,7 @@ describe("CouchDB Utils - runSync() Test Suite", () => {
     const dbName = "runsync_teste_db";
 
     after(async () => {
-      const endpoint = `http://admin:admin@localhost:5984/${dbName}`;
+      const endpoint = `${url}/${dbName}`;
       await axios.delete(endpoint);
     });
 
@@ -59,7 +62,7 @@ describe("CouchDB Utils - runSync() Test Suite", () => {
         // console.log(r);
 
         const res = await axios.get(
-          `http://admin:admin@localhost:5984/${dbName}/_design_docs?include_docs=true`
+          `${url}/${dbName}/_design_docs?include_docs=true`
         );
         // console.log("GET res");
         // console.log(res.status);

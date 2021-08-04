@@ -85,6 +85,25 @@ describe("CouchDB Utils - Tools: loadConfigs() Test Suite", () => {
   });
 
   // C4
+  context("Ctx: using a JSON file with bad syntax", () => {
+    before(() => {
+      // this file has last line ending comma, and will fail jSON syntax
+      fs.writeFileSync(testCustomFile.workDir, cdburc.toString());
+    });
+
+    after(() => {
+      // delete require.cache[require.resolve(testRcFile.workDir)];
+      fs.unlinkSync(testCustomFile.workDir);
+    });
+
+    it("should exit with error", () => {
+      expect(() => {
+        loadConfigs(testCustomFile.workDir);
+      }).to.throw("[Error:] Invalid JSON syntax.");
+    });
+  });
+
+  // C4
   context("Ctx: using object data", () => {
     it("should load from arg -C data object", () => {
       const result = loadConfigs(cdburc);

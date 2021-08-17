@@ -1,6 +1,6 @@
 {
   "name": "couchdb-extsync",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A set of tools to manage Couchdb design docs and other usefull stuffs",
   "bin": {
     "cdbu": "./lib/cli.js"

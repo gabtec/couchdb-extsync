@@ -1,1 +1,0 @@
-{"_id":"_design/videos","_rev":"1-91c399e49b0029e2bb8c5e4167ec621f","views":{"by_year":{"map":"function (doc) {\n  if(doc && doc.year) {\n    emit(doc.year, 1);\n  }\n}"}},"language":"javascript"}
